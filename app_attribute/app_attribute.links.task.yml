@@ -1,0 +1,21 @@
+entity.attribute.canonical:
+  route_name: entity.attribute.canonical
+  base_route: entity.attribute.canonical
+  title: 'View'
+entity.attribute.edit_form:
+  route_name: entity.attribute.edit_form
+  base_route: entity.attribute.canonical
+  title: Edit
+entity.attribute.delete_form:
+  route_name: entity.attribute.delete_form
+  base_route: entity.attribute.canonical
+  title: Delete
+  weight: 10
+entity.attribute_type.edit_form:
+  title: 'Edit'
+  route_name: entity.attribute_type.edit_form
+  base_route: entity.attribute_type.edit_form
+entity.attribute_type.collection:
+  title: List
+  route_name: entity.attribute_type.collection
+  base_route: entity.attribute_type.collection

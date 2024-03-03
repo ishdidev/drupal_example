@@ -1,0 +1,8 @@
+entity.attribute_type.collection:
+  title: 'Attribute Bundle'
+  parent: system.admin_structure
+  description: 'Create and manage fields, forms, and display settings for your attribute bundle.'
+  route_name: entity.attribute_type.collection
+attribute.add_page:
+  title: 'Add Attribute'
+  route_name: attribute.add_page

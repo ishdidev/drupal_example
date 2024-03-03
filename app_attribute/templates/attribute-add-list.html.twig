@@ -1,0 +1,19 @@
+<div class="cms-bundle-list">
+{% if content is not empty %}
+    <ul class="cms-bundle-list-row">
+    {% for type in content %}
+      <li>
+        <label><a href="{{ path('attribute.add', {'attribute_type': type.id}) }}">{{ type.label }}</a></label>
+        <span>{{ type.description }}<br/>{{ type.id }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+{% else %}
+  <p>
+    {% set create_content = path('attribute.attribute_type_add') %}
+    {% trans %}
+      You have not created any attribute types yet. Go to the <a href="{{ create_content }}">attribute type creation page</a> to add a new attribute type.
+    {% endtrans %}
+  </p>
+{% endif %}
+</div>

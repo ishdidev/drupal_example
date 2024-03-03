@@ -1,0 +1,9 @@
+entity.attribute.edit_form:
+  route_name: entity.attribute.edit_form
+  group: attribute
+  title: Edit
+entity.attribute.delete_form:
+  route_name: entity.attribute.delete_form
+  group: attribute
+  title: Delete
+  weight: 10

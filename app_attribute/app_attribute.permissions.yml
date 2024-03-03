@@ -1,0 +1,6 @@
+administer attributes:
+  title: 'Administer Attribute'
+  description: 'View, edit and delete all attributes.'
+  restrict access: true
+permission_callbacks:
+  - \Drupal\app_attribute\AttributePermissions::attributeTypePermissions

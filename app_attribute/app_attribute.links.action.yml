@@ -1,0 +1,11 @@
+attribute.attribute_type_add:
+  route_name: attribute.attribute_type_add
+  title: 'Add attribute bundle'
+  appears_on:
+    - entity.attribute_type.collection
+attribute.add_page:
+  route_name: attribute.add_page
+  title: 'Add Attribute'
+  appears_on:
+    - view.attribute.page_1
+

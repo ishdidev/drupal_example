@@ -1,0 +1,49 @@
+entity.attribute_type.collection:
+  path: '/admin/structure/attribute'
+  defaults:
+    _entity_list: 'attribute_type'
+    _title: 'Attribute types'
+  requirements:
+    _permission: 'administer content types'
+attribute.attribute_type_add:
+  path: '/admin/structure/attribute_type/add'
+  defaults:
+    _entity_form: 'attribute_type.add'
+    _title: 'Add attribute type'
+  requirements:
+    _permission: 'administer content types'
+attribute.add_page:
+  path: '/attribute/add'
+  defaults:
+    _title: 'Add attribute'
+    _controller: '\Drupal\app_attribute\Controller\AttributeController::addPage'
+  options:
+    _attribute_operation_route: TRUE
+  requirements:
+    _entity_create_any_access: 'attribute'
+attribute.add:
+  path: '/attribute/add/{attribute_type}'
+  defaults:
+    _entity_form: 'attribute.default'
+  requirements:
+    _entity_create_access: 'attribute:{attribute_type}'
+  options:
+    _attribute_operation_route: TRUE
+    parameters:
+      attribute_type:
+        type: entity:attribute_type
+        with_config_overrides: TRUE
+entity.attribute_type.edit_form:
+  path: '/admin/structure/attribute_type/manage/{attribute_type}'
+  defaults:
+    _entity_form: 'attribute_type.edit'
+    _title_callback: '\Drupal\Core\Entity\Controller\EntityController::title'
+  requirements:
+    _permission: 'administer content types'
+entity.attribute_type.delete_form:
+  path: '/admin/structure/attribute_type/manage/{attribute_type}/delete'
+  defaults:
+    _entity_form: 'attribute_type.delete'
+    _title: 'Delete'
+  requirements:
+    _entity_access: 'attribute_type.delete'
